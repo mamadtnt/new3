@@ -217,6 +217,7 @@ function create_config( )
     "inpm",
     "banhammer",
     "stats",
+    "getplug",
     "anti_spam",
     "owners",
     "feedback",
