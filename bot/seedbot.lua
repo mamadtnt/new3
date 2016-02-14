@@ -250,7 +250,6 @@ function create_config( )
     "block",
     "time",
     "webshot",
-    "spam",
     "location",
     "fosh",
     "service_entergroup",
