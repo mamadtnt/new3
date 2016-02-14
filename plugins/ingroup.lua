@@ -14,6 +14,8 @@ local function check_member_autorealm(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           antifosh = 'no',
+          arabick = 'no',
+          english = 'no',
 		  antitag = 'no',
 		  antilink = 'no',
 		  lock_name = 'yes',
@@ -47,6 +49,8 @@ local function check_member_realm_add(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           antifosh = 'no',
+          arabick = 'no',
+          english = 'no',
 		  antitag = 'no',
 		  antilink = 'no',
 		  lock_name = 'yes',
@@ -82,6 +86,8 @@ function check_member_group(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           antifosh = 'no',
+          arabick = 'no',
+          english = 'no',
 		  antitag = 'no',
 		  antilink = 'no',
 		  lock_name = 'yes',
@@ -117,6 +123,8 @@ local function check_member_modadd(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           antifosh = 'no',
+          arabick = 'no',
+          english = 'no',
 		  antitag = 'no',
 		  antilink = 'no',
 		  lock_name = 'yes',
@@ -204,7 +212,7 @@ local function show_group_settingsmod(msg, data, target)
         	NUM_MSG_MAX = tonumber(data[tostring(msg.to.id)]['settings']['flood_msg_max'])
         	print('custom'..NUM_MSG_MAX)
       	else 
-        	NUM_MSG_MAX = 5
+        	NUM_MSG_MAX = 1
       	end
     end
     local bots_protection = "Yes"
@@ -216,7 +224,7 @@ local function show_group_settingsmod(msg, data, target)
     	leave_ban = data[tostring(msg.to.id)]['settings']['leave_ban']
    	end
   local settings = data[tostring(target)]['settings']
-  local text = "تنظیمات گروه:\nممنوعیت فحاشی : "..settings.antifosh.."\nقفل تگ : "..settings.antitag.."\nقفل لینک : "..settings.antilink.."\nقفل نام گروه : "..settings.lock_name.."\nقفل عکس گروه : "..settings.lock_photo.."\nقفل اعضا گروه : "..settings.lock_member.."\nقفل خروج : "..leave_ban.."\nحساسیت اسپم: "..NUM_MSG_MAX.."\nقفل ربات ها : "..bots_protection--"\nPublic: "..public
+  local text = "تنظیمات گروه:\nممنوعیت فحاشی : "..settings.antifosh.."\nقفل تگ : "..settings.antitag.."\nقفل لینک : "..settings.antilink.."\nقفل نام گروه : "..settings.lock_name.."\nقفل عکس گروه : "..settings.lock_photo.."\nقفل اعضا گروه : "..settings.lock_member.."\nقفل خروج : "..leave_ban..": "..arabick.."\n قفل عربی:"..english.."\n قفل انگلیسی :\nحساسیت اسپم: "..NUM_MSG_MAX.."\nقفل ربات ها "..bots_protection--"\nPublic: "..public
   return text
 end
 
@@ -609,7 +617,7 @@ local function set_group_photo(msg, success, result)
     save_data(_config.moderation.data, data)
     data[tostring(msg.to.id)]['settings']['lock_photo'] = 'yes'
     save_data(_config.moderation.data, data)
-    send_large_msg(receiver, 'Photo saved!', ok_cb, false)
+    send_large_msg(receiver, 'الان سیو میشه', ok_cb, false)
   else
     print('Error downloading: '..msg.id)
     send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
@@ -620,7 +628,7 @@ local function promote(receiver, member_username, member_id)
   local data = load_data(_config.moderation.data)
   local group = string.gsub(receiver, 'chat#id', '')
   if not data[group] then
-    return send_large_msg(receiver, 'Group is not added.')
+    return send_large_msg(receiver, 'گروه ادد نشده.')
   end
   if data[group]['moderators'][tostring(member_id)] then
     return send_large_msg(receiver, member_username..'  از قبل مدیر است')
