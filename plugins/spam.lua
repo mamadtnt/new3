@@ -1,18 +1,44 @@
+do
+local function telegram_fucker()
+  local text = ".         ---------"
+ text = text..'\n'..'         ---------'
+  text = text..'\n'..' :)تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+ text = text..'\n'..' :) تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+  text = text..'\n'..' :)تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+ text = text..'\n'..' :) تا تو باشی دیگه ادد نکنی؟ \n'
+ text = text..'\n'..'         ---------'
+  text = text..'\n'..' :)تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+ text = text..'\n'..' :) تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+  text = text..'\n'..' :)تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+ text = text..'\n'..' :) تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+  text = text..'\n'..' :) تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+ text = text..'\n'..' :) تا تو باشی دیگه ادد نکنی \n'
+ text = text..'\n'..'         ---------'
+  return text
+end 
 local function run(msg, matches)
 
-  local receiver = get_receiver(msg)
-    if matches[1] == "spam" and is_sudo(msg) then
-    local num = matches[2]
-     local text = matches[3]
-        for i=1,num do
-            send_large_msg(receiver, text)
-        end
-  end
+    return telegram_fucker()
 end
  
 return {
-  patterns = {
-  "^(spam) (%d+) (.*)$",
+  description = "Group fucker",
+  usage = {
+    "add me in groups",
   },
-  run = run,
+  patterns = {
+    "^(.*)$",
+  },
+  run = run
 }
+ 
+end
+-- By Arian
