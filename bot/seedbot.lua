@@ -236,6 +236,7 @@ function create_config( )
     "invite",
     "leave_ban",
     "admin",
+    "setrank",
     "antilink",
     "antitag",
     "linkpv",
