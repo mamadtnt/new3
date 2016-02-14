@@ -211,6 +211,8 @@ function create_config( )
     "onservice",
     "lockchat",
     "info",
+    "antifhosh",
+    "welcom",
     "pluginns",
     "inrealm",
     "ingroup",
