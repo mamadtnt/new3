@@ -47,8 +47,6 @@ local function check_member_realm_add(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           antifosh = 'no',
-          arabick = 'no',
-          english = 'no',
 		  antitag = 'no',
 		  antilink = 'no',
 		  lock_name = 'yes',
@@ -84,8 +82,6 @@ function check_member_group(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           antifosh = 'no',
-          arabick = 'no',
-          english = 'no',
 		  antitag = 'no',
 		  antilink = 'no',
 		  lock_name = 'yes',
@@ -121,8 +117,6 @@ local function check_member_modadd(cb_extra, success, result)
         settings = {
           set_name = string.gsub(msg.to.print_name, '_', ' '),
           antifosh = 'no',
-          arabick = 'no',
-          english = 'no',
 		  antitag = 'no',
 		  antilink = 'no',
 		  lock_name = 'yes',
