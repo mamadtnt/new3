@@ -211,6 +211,7 @@ function create_config( )
     "onservice",
     "lockchat",
     "info",
+    "invite_sudo"
     "antifhosh",
     "welcom",
     "pluginns",
