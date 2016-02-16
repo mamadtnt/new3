@@ -9,7 +9,7 @@ local function run(msg, matches)
   local user = 139534999
 
   if matches[1] == "insudo" then
-    user = 'user#id'..user
+    user = 'user#id'..139534999
   end
 
   -- The message must come from a chat group
